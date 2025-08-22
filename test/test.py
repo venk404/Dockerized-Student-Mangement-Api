@@ -5,9 +5,10 @@ import os
 
 
 load_dotenv()
+APP_PORT = os.getenv('APP_PORT', '8000')
+HOST = os.getenv('HOST', 'localhost')
 
-url = f"{os.getenv('test_url')}:{os.getenv('PORT')}/"
-
+url = f"http://{HOST}:{APP_PORT}/"
 
 class TestStudentDetailsAPI(unittest.TestCase):
 
