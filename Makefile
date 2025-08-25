@@ -84,12 +84,17 @@ else
 	find . -type d -name "venv" -exec rm -rf {} +
 endif
 
-
-test:
+test:install
 ifeq ($(OS),Windows_NT)
-	$(VENV)\Scripts\python test/test.py
+	$(VENV)\Scripts\python ./test/test.py
 else:
-	$(VENV)\bin\python test/test.py
+	$(VENV)/bin/python ./test/test.py
 endif
+
+down:
+	@echo "Stopping and removing containers..."
+	docker rm -f $(API_CONTAINER_NAME) || true
+	docker-compose down
+	docker rmi -f $(API_IMAGE_NAME):$(API_IMAGE_VERSION) || true
 
 .PHONY: install all Start_DB Schema-creation api-build api-run test clean 
