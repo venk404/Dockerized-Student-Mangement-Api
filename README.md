@@ -25,8 +25,8 @@ This project is a simple Student Management API built using FastAPI. It allows f
 1) Clone the repository:
 
 ```bash
-  git clone https://github.com/venk404/Assignment-2.git
-  cd 
+  git clone https://github.com/venk404/Dockerized-Student-Mangement-Api.git
+  cd Dockerized-Student-Mangement-Api/
 ```
 3) ## There are one .env example files and  pyway.conf file for migartion:
 
