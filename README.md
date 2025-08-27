@@ -26,6 +26,7 @@ This project is a simple Student Management API built using FastAPI. It allows f
 
 ```bash
   git clone https://github.com/venk404/Assignment-2.git
+  cd 
 ```
 3) ## There are one .env example files and  pyway.conf file for migartion:
 
